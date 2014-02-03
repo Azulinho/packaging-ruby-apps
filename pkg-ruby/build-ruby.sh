@@ -1,6 +1,6 @@
 #!/bin/bas
 
-RUBY_VERSION=2.0.0-p353
+RUBY_VERSION=1.9.3-p484
 RUBY_INSTALL_PATH=/opt/ruby-local-$RUBY_VERSION
 
 TIMESTAMP=$( date +%s) #used for the build version number
@@ -42,3 +42,5 @@ fpm -s dir  -t rpm -n ruby-local-$RUBY_VERSION -v $TIMESTAMP -C $INSTALL_DIR -p 
 
 rm -rf $INSTALL_DIR
 rm -rf $BUILD_DIR
+
+
