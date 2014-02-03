@@ -29,7 +29,8 @@ make clean
 make  -j 4
 make install DESTDIR=$INSTALL_DIR
 
-$INSTALL_DIR/$RUBY_INSTALL_PATH/bin/gem install bundler
+#Move bundler into its own package
+#$INSTALL_DIR/$RUBY_INSTALL_PATH/bin/gem install bundler
 
 cd $INSTALL_DIR
 rm -f $INSTALL_DIR/usr/bin/ruby-local-$RUBY_VERSION
