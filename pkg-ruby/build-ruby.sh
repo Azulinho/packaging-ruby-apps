@@ -1,6 +1,6 @@
 #!/bin/bas
 
-RUBY_VERSION=2.1.0
+RUBY_VERSION=2.0.0
 RUBY_INSTALL_PATH=/opt/ruby-local-$RUBY_VERSION
 
 TIMESTAMP=$( date +%s) #used for the build version number
