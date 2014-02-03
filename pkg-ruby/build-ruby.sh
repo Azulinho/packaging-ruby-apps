@@ -1,9 +1,9 @@
 #!/bin/bas
 
-RUBY_VERSION=2.0.0-p247
+RUBY_VERSION=2.1.0
 RUBY_INSTALL_PATH=/opt/ruby-local-$RUBY_VERSION
 
-TIMESTAMP=$( date +%s) #used for the build version number 
+TIMESTAMP=$( date +%s) #used for the build version number
 
 #disinfect work areas
 BUILD_DIR=$PWD/build
@@ -20,7 +20,7 @@ mkdir $OUTPUT_DIR
 
 #BUILD
 RUBY_SERIES=$( echo $RUBY_VERSION | cut -f 1-2 -d "." )
-wget -c ftp://ftp.ruby-lang.org/pub/ruby/$RUBY_SERIES/ruby-$VERSION.tar.gz
+wget -c http://cache.ruby-lang.org/pub/ruby/$RUBY_SERIES/ruby-$RUBY_VERSION.tar.gz
 cd $BUILD_DIR
 tar xzf ../ruby-$RUBY_VERSION.tar.gz
 cd ruby-$RUBY_VERSION
